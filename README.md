@@ -26,7 +26,7 @@ Aqui estão alguns dos projetos em destaque que desenvolvi durante minha jornada
 
 ### 💼 Trajetória & Soft Skills
 
-- 🎓 **Formação:** Cursando Tecnólogo em ADS (Previsão de término: [Mês/Ano]).
+- 🎓 **Formação:** Cursando Tecnólogo em ADS (Previsão de término: 12/2026).
 - 🏢 **Experiência:** Bagagem prática no **McDonald's**, onde desenvolvi alta capacidade de **trabalho sob pressão, agilidade em equipe, foco em processos padronizados e atendimento**.
 - 🎯 **Objetivo:** Buscando oportunidades de **Estágio em Desenvolvimento de Software / TI** ou **Suporte Técnico**.
 
