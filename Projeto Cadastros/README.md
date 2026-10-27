@@ -3,6 +3,7 @@
 Aplicação Desktop desenvolvida em **Java** com interface gráfica moderna construída no **SceneBuilder (JavaFX)** e persistência de dados no **MySQL**. O sistema permite gerenciar usuários, produtos e gêneros.
 
 ---
+## Feito No Tercer Periodo De ADS
 
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 

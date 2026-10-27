@@ -1,0 +1,455 @@
+:root{
+    --cor-principal: black
+}
+@font-face{
+    font-family: 'Aseprite Font';
+    src: url(./Fonts/aseprite.otf) format('opentype');
+    font-weight:normal;
+    font-style: normal;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    font-family: 'Aseprite Font';
+    vertical-align: middle;
+}
+/* #region Animaçoes*/
+@keyframes iniciar {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+@keyframes CardSpawn{
+    0%{
+        transform: translateX(-50px);
+        opacity: 0%;
+        }
+    100%{
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+}
+@keyframes CardDespawn{
+        0%{
+        transform: translateX(0px);
+        opacity: 0%;
+        }
+    100%{
+        transform: translateX(-50px);
+        opacity: 100%;
+    }
+}
+@keyframes SpawnInfo{
+    0%{
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+/* #endregion */
+/* #region Corpo Inicial*/
+body{
+    height: 160vw;
+    background-image: url('./Imagems_Extras/Fundo_Copia2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+#Tela_Carregar{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: #121212;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 9999; 
+    transition: opacity 0.5s ease;
+}
+#Texto_Carregar{
+color: white;
+font-family: sans-serif;
+margin-bottom: 20px;
+}
+#Fundo_Carregar{
+    width: 300px;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #555;
+}
+#Barra_Carregar{
+    width: 0%;
+    height: 100%;
+    background: #ff4757;
+    transition: width 0.1s ease;
+}
+.Inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 10vw;
+    gap: 5px;
+    padding: 0%;
+    margin: 0% auto;
+    margin-top: 5vw;
+}
+@media(max-width <= 1200px) {
+    .margem_pixel {
+        width: 80vw;
+        height: auto;
+        flex-wrap: wrap; 
+    }
+    .card{
+        width: 150px;
+        height: 210px;
+    }
+    #Titulo {
+        width: 100%; 
+    }
+
+    #Botao_Deck, #Botao_Login {
+        width: 35%;
+        margin-left: 1px;
+    }
+    #Botao_Home{
+        width: 40%;
+    }
+}
+/* #endregion*/
+/* #region Margem Inicial*/
+.margem_pixel{
+    display: flex;
+    background-image: url(./Imagems_Extras/Margem_PixelMon.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items:center;
+   
+    gap: 1vw;
+    padding: 5vw;
+
+    max-width: 70vw;
+    height: auto;
+
+    min-height: 200px;
+
+    animation: iniciar 1s ease-in-out normal
+
+}
+    #Titulo img, #Botao_Home img, #Botao_Deck img, #Botao_Login img{
+    animation: iniciar 1s ease-in-out normal;
+    }
+    #Titulo{
+        width: 25vw;       /* Título um pouco maior */
+    }
+    #Botao_Deck, #Botao_Login{
+        width: 12vw;
+        cursor: pointer;
+         &:active{
+        transform: translateX(5%) translateY(5%);
+        filter: brightness(70%);
+        }
+    }
+    #Botao_Home{
+        width: 5vw;
+        cursor: pointer;
+        &:active{
+        transform: translateX(5%) translateY(5%);
+        filter: brightness(70%);
+        }
+    }
+/* #endregion*/
+/* #region Procurar*/
+.Area_Buscar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 70vw;
+    height: 5vw;
+    max-height: 200px;
+
+    margin: 20px auto;
+    padding: 0 30px;
+    gap: 1.5vw;
+    box-sizing: border-box;
+}
+#Buscar_Ok{
+    background: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 0 10px;
+
+    background-image: url("./Imagems_Extras/Area_Vacio.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    width: 5vw;
+    height: 5vw;
+    font-size: 1vw;
+    &:active{
+        transform: translateX(5%) translateY(5%);
+        filter: brightness(70%);
+    }
+}
+#Buscar, #buscar-tipo{
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size: 16px;
+    color: black;
+    font-size: 2vw;
+    padding-left: 1vw;
+}
+#Buscar{
+    background-image: url("./Imagems_Extras/Area_Texto.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    width: 25vw;
+    height: 5vw;
+}
+#buscar-tipo{
+    background-image: url("./Imagems_Extras/Area_Texto.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    width: 25vw;
+    height: 5vw;
+}
+/* #endregion */
+#poke_contain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4vw;
+    z-index: 1;
+    .card{
+        width: 17vw;
+        height: 19vw;
+        display: block;
+        position: relative;
+        cursor: pointer; 
+
+        animation: CardSpawn 0.5s ease-in-out normal;
+
+        .card_pokemon{
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            box-sizing: border-box;
+            position: relative;
+           
+
+            transition: transform 0.5s ease;
+                .Texto_Pokemon{
+                    position: absolute;
+                    top: 16%;
+                    text-transform: uppercase;
+                    font-size: 1.4vw;
+                    text-align: center;
+                }
+                .pokemons{
+                    position: absolute;
+                    display: block;
+                    width: 10vw;
+                    height: auto;
+                }
+                &:hover {
+                    transform: scale(1.1);
+                    z-index: 10;
+                }
+        }
+        .grupo_texto{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: baseline;
+            gap: 2px;
+
+            position: absolute;
+            top: 4.4%;
+            right: 45%;
+                .Texto_ID, .Texto_2{
+                    font-size: 1.2vw;
+                    color: var(--cor-principal);
+                }
+        }
+        .Favorito{
+            display: flex;
+            position: absolute;
+            width: 4vw;
+            height: auto;
+            left: 73%;
+            bottom: 5%;
+        }
+    }
+}
+/* #region CardInformacao*/
+#card_info{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    width: 70vw;
+    height: 43vw;
+    display: none;
+
+    background-color: red;
+    border: 4px solid black;
+    padding: 15px;
+    box-sizing: border-box;
+
+    animation: SpawnInfo 0.5s ease-in-out normal;
+}
+.area_foto {
+    width: 40%;
+    max-width: 500px;
+    gap: 2vw;
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    align-self: center;
+}
+.Back_card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    gap: 10px;
+    overflow-y: auto;
+}
+.pokemonID{
+    font-size: 5vw;
+    text-align: center;
+}
+.pokemonGen{
+    font-size: 3vw;
+    text-align: center;
+}
+.pokemon_cardinfo{
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+.info_pokemon {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    gap: 1.4vw;          
+    padding: 15px;
+    box-sizing: border-box;
+
+    overflow-y: auto;
+    max-height: 100%;
+}
+p{
+    font-size: 1.6vw;
+}
+.pokemon_nome{
+   font-size: 3vw;
+   text-align:center;
+   padding-right: 5vw;
+   text-transform: uppercase;
+}
+.pokemonTipo{
+    display: flex;
+    width: 20vw;
+    height: 20vw;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 1vw;
+}
+#btn_sair{
+position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    background: #ef5350;
+    color: #fff;
+    border: 3px solid #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 12px;
+    &:hover {
+    background: #c62828;
+}
+}
+/* #endregion*/
+.Fim{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-top: 20px;
+    gap: 4px;
+    
+    #Botao_Proximo{
+        position: relative;
+        order: 3;
+        width: 5vw;
+        &:active{
+        transform: translateX(5%) translateY(5%);
+        filter: brightness(70%);
+        }
+    }
+    #Botao_Anterior{
+        position: relative;
+        order: 1;
+        width: 5vw;
+        transform: scaleX(-1);
+        &:active{
+        transform: scaleX(-1) translateX(5%) translateY(5%);
+        filter: brightness(70%);
+        }
+    }
+    #N_Pagina{
+        background: transparent;
+        border: none;
+        outline: none;
+        background-image: url("./Imagems_Extras/Area_Vacio.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        order: 2 !important;
+        text-align: center;
+        justify-content: center;
+        font-size: 3.4vw;
+        width: 8vw;
+        height: 5vw;
+    }
+    #N_Pagina::-webkit-outer-spin-button, 
+    #N_Pagina::-webkit-inner-spin-button{ -webkit-appearance: none;}
+}
