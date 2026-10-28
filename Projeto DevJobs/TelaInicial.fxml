@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane style="-fx-border-color: Black; -fx-background-color: #000080;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="1011.0" style="-fx-effect: dropshadow(three-pass-box, black , 10, 0, 0, 0); -fx-font-family: Inter;" text="DEVJOBS" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="952.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="72.0" style="-fx-background-color: none; -fx-alignment: right;" text="🔔" textFill="#eeff00">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" prefHeight="63.0" prefWidth="296.0" text="Consulta de vagas" textFill="NAVY" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="strUser" maxWidth="1.7976931348623157E308" onAction="#digUser" prefHeight="49.0" prefWidth="984.0" promptText="Buscar Vaga" style="-fx-background-radius: 3px;" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox spacing="150.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="127.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 25px;" text="Programaçao&#10;" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" prefWidth="127.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 25px;" text="Suporte" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" prefWidth="127.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 25px;" text="Segurança" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" prefWidth="127.0" style="-fx-background-color: #eaeaea; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 25px;" text="Dados" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" pickOnBounds="false" prefHeight="403.0" prefWidth="1024.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane prefHeight="1162.0" prefWidth="1008.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="119.75" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="119.75" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="119.75" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="119.75" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="119.75" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="119.75" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="119.75" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="119.75" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="119.75" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="119.75" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Pane fx:id="vaga1" onMouseClicked="#clicouNoCard" onMouseEntered="#entrouNoCard" onMouseExited="#saiuDoCard" prefHeight="120.0" prefWidth="126.0" style="-fx-border-color: gray;">
+                           <children>
+                              <Label fx:id="txtVaga1" layoutX="98.0" prefHeight="40.0" prefWidth="860.0" text="Desenvolvedor Java Júnior">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="txtTipoData1" layoutX="92.0" layoutY="39.0" prefHeight="30.0" prefWidth="853.0" text="Programação - Fox do Iguaçu, PR">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fx:id="imgEmpresa1" fitHeight="80.0" fitWidth="100.0" layoutY="1.0" pickOnBounds="true" style="visibility: true;">
+                                 <image>
+                                    <Image url="@Imagem/icone.png" />
+                                 </image>
+                              </ImageView>
+                              <HBox layoutX="-2.0" layoutY="85.0" prefWidth="963.0" spacing="20.0">
+                                 <children>
+                                    <Label fx:id="txtDias1" style="-fx-border-color: black; -fx-border-radius: 10%;" text="Dias" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="txtTurno1" style="-fx-border-color: black; -fx-border-radius: 10%;" text="Turno" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="txtTipoVaga1" style="-fx-border-color: black; -fx-border-radius: 10%;" text="Tipo De Vaga" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="txtSalario1" style="-fx-border-color: black; -fx-border-radius: 10%;" text="Salario" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="txtRemoto1" style="-fx-border-color: black; -fx-border-radius: 10%;" text="Remoto" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="txtDeslocamento1" style="-fx-border-color: black; -fx-border-radius: 10%;" text="Deslocamento" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="txtMudança1" style="-fx-border-color: black; -fx-border-radius: 10%;" text="Mudança" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="txtImediato1" style="-fx-border-color: black; -fx-border-radius: 10%;" text="Imediato" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" spacing="150.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #eaeaea; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 10%;" text="🏠&#10;Pagina&#10;Principal&#10;" textAlignment="CENTER" wrapText="true" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #eaeaea; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 10%;" text="❤&#10;Minhas&#10;Vagas" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #eaeaea; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 10%;" text="✉&#10;Mensagems&#10;&#10;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #eaeaea; -fx-background-radius: 25px; -fx-border-color: black; -fx-border-radius: 10%;" text="🧑‍💼&#10;Perfil" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="15.0" left="30.0" right="30.0" top="15.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

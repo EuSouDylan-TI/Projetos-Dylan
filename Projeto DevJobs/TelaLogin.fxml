@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="66.0" prefWidth="1024.0" style="-fx-background-color: #000080;" AnchorPane.bottomAnchor="653.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="1.0" prefHeight="66.0" prefWidth="1024.0" style="-fx-text-fill: White; -fx-effect: dropshadow(three-pass-box, black , 10, 0, 0, 0); -fx-font-family: Inter;" text="DEVJOBS" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Consolas Bold" size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane layoutY="66.0" prefHeight="654.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="321.6000122070312" minHeight="10.0" prefHeight="192.80001831054688" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="321.6000122070312" minHeight="10.0" prefHeight="51.79998779296875" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="436.79998168945315" minHeight="10.0" prefHeight="105.99998779296877" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="222.5999816894531" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="222.5999816894531" minHeight="10.0" prefHeight="67.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="222.5999816894531" minHeight="10.0" prefHeight="18.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="222.5999816894531" minHeight="10.0" prefHeight="67.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="222.5999816894531" minHeight="10.0" prefHeight="65.80001220703127" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="222.5999816894531" minHeight="10.0" prefHeight="43.79998779296875" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="32.0" prefWidth="143.0" text="Acesse Sua Conta" textAlignment="CENTER" textFill="#4e4e4e" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Cambria" size="19.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="78.0" prefWidth="322.0" text="DevJobs" textAlignment="CENTER" textFill="DARKBLUE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Georgia Bold" size="50.0" />
+               </font>
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="0.018421052023768425" blue="0.3684210479259491" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Label>
+            <ImageView fitHeight="188.0" fitWidth="253.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+               <image>
+                  <Image url="@Imagem/icone.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="32.0" prefWidth="174.0" text="USUÁRIO OU E-MAIL" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="220.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="strUser" maxWidth="1.7976931348623157E308" onAction="#digUser" prefHeight="66.0" promptText="usuario@exemplo.com" style="-fx-background-radius: 5px;" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="210.0" right="210.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="32.0" prefWidth="62.0" text="SENHA" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="220.0" />
+               </GridPane.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#btnAceitar" prefHeight="41.0" prefWidth="600.0" style="-fx-background-color: RoyalBlue; -fx-text-fill: White;" text="ENTRAR" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Ebrima Bold" size="25.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Hyperlink onAction="#IrCadastro" prefHeight="32.0" prefWidth="295.0" text="Ainda não tem conta? Criar Cadastro" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Hyperlink>
+            <PasswordField fx:id="strSenha" onAction="#digSenha" prefHeight="66.0" promptText="••••••••••••••••" style="-fx-background-radius: 5px;" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="210.0" right="210.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
