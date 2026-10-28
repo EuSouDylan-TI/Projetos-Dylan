@@ -19,8 +19,8 @@ Aqui estão alguns dos projetos em destaque que desenvolvi durante minha jornada
 
 | Projeto | Descrição | Tecnologias | Repositório |
 | :--- | :--- | :--- | :--- |
-| 🌐 **Nome do Projeto 1** | Aplicação web para [explicar o que faz]. | `JavaScript` `HTML/CSS` | [Ver Código](link-do-repositorio-1) |
-| 📊 **Nome do Projeto 2** | Sistema de [gerenciamento/estoque/etc]. | `Java`, `SceneBuilder`, ` javaFX` | [Ver Código](link-do-repositorio-2) |
+| 🌐 **Nome do Projeto 1** | Aplicação web para [explicar o que faz]. | `React` `JavaScript` `CSS` | [Ver Código](link-do-repositorio-1) |
+| 📊 **Nome do Projeto 2** | Sistema de [gerenciamento/estoque/etc]. | `JavaScript` `HTML/CSS` | [Ver Código](link-do-repositorio-2) |
 
 ---
 
