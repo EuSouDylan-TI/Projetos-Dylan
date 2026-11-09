@@ -1,0 +1,244 @@
+:root {
+    --tmtr-bg: #982D27;
+    --tmtr-card: #8E2A24;
+    --tmtr-text: #FAF7F2;
+    --tmtr-muted: #E9CDB3;
+    --tmtr-yellow: #F0B90B;
+    --tmtr-red: #FF5A36;
+    --tmtr-orange: #F39C12;
+    --tmtr-black: #212121;
+    --tmtr-pill: #F1B500;
+    --tmtr-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+}
+*{
+    margin: 0%;
+}
+@keyframes mudarbordainput {
+    0%{
+        border-color: #dfdfdf;
+    }
+    100%{
+        border-color: red;
+    }
+}
+@keyframes SubirCor{
+    0%{
+        translate: 5px;
+    }
+    100%{
+
+    }
+}
+header{
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: #f6ff00;
+    height: 50px;
+    width: 98%;
+    box-shadow: 0px 2px 10px black;
+    h1{
+        color: #ff0000;
+    }
+    .area_header {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 5px;
+            .grupo-botoes {
+            display: flex;
+            gap: 20px;
+            }
+    }
+    p[type="Apostas"]{
+        background-color: gray;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 15px;
+
+        text-align: center;
+        font-size: 120%;
+
+        color: white;
+    }
+    .logo img{
+        border-radius: 100%;
+        height: 50px;
+        width: auto;
+        display: block;
+    }
+    button{
+        background: none;
+        border: none;
+    }
+    .grupo_botoes{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .separador-vertical{
+        display: flex;
+        flex-wrap: nowrap;
+            width: 2px;
+            height: 30px;
+            background-color: gray;
+    }
+    button{
+        font-size: 15px;
+        font-weight: bold;
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color:gray
+        }
+    }
+    button:hover{
+        transform: translateY(-1px);
+    }
+    #input-com-botao {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 40px;
+        border: 1px solid #dfdfdf;
+        border-radius: 18px;          /* Deixa as bordas arredondadas (estilo pílula) */
+        background-color: #fff;
+        overflow: hidden;             /* Garante que nada escape para fora das bordas arredondadas */
+        padding-left: 10px;           /* Um respiro para o texto não colar na bordinha */
+    }
+    #input-com-botao input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 8px 0;
+        font-size: 14px;
+        background: transparent;
+    }
+    #input-com-botao button {
+        color: rgb(132, 132, 132);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+        img{
+            width: 25px;
+            filter: grayscale(100%) brightness(0%);
+        }
+        img:hover{
+            filter: grayscale(100%) brightness(0.5);
+        }
+    }
+    #input-com-botao:focus-within {
+        animation: mudarbordainput 0.5s ease-in-out;
+        border-color: red;
+    }
+}
+nav{
+    display: flex;
+    position: fixed;
+    z-index: 8;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+
+    height: 88vh;
+    width: 9%;
+    margin: 5em 0;
+    padding: 1% 0;
+    gap: 1px;
+    background-color: var(--tmtr-pill);
+    color: #f9f9f9;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        color: gray;
+        font-weight: bold;
+    }
+    p{
+        height: 1vh;
+        text-align: center;
+    }
+    img{
+        border-radius: 100%;
+        justify-self: center;
+        height: 2.5em;
+        width: auto;
+        display: block;
+    }
+    hr{
+        border: none;
+        border-top: 2px dotted gray;
+        width: 100%;          
+        margin: 0 0;
+    }
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    
+    margin-left: 6.2rem;
+    top:5rem;
+    section[class="Ganhadores"]{
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 0 0;
+
+
+        height: 8rem;
+        width: 100%;
+
+        background-color: rgb(71, 71, 71);
+        color: white;
+            div[class="melhorTextos"]{
+                display: flex;
+                text-align: center;
+            }
+            .circle{
+                    height: 60px;
+                    width: 60px;
+                    background-color: black;
+                    border: 2px solid red;
+                    border-radius: 50%;
+            }
+    }
+    
+    section[class="Noticias"]{
+        height: 38rem;
+        width: 100%;
+        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(62, 61, 61));
+        color: rgb(255, 230, 0);
+    }
+    section[class="Contador"]{
+        height: 8rem;
+        width: 100%;
+        background-color: rgb(255, 217, 0);
+        color: rgb(22, 22, 22);
+    }
+    section[class="TotalFilmes"]{
+        height: 20rem;
+        width: 100%;
+        background-color: rgb(42, 42, 42);
+        color: white;
+    }
+    section[class="termometeiro"]{
+        height: 90rem;
+        width: 100%;
+        background-color: rgb(134, 33, 33);
+        color: white;
+    }
+    section[class="ultimasNoticias"]{
+        height: 90rem;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+}
