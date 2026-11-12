@@ -13,6 +13,7 @@ public class Candidato {
     private String cpf;
     private String nascimento;
     private String email;
+    private String senha;
     private String telefone;
     private Sexualidade sexualidade;
 
@@ -71,6 +72,13 @@ public class Candidato {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public String getTelefone() {

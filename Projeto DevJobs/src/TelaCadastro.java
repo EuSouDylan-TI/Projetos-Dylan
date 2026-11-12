@@ -43,6 +43,7 @@ private void configurarEventoEnter() {
         jTextField7,
         jTextField8,
         jTextField9,
+        jTextField10,
         jComboBox2,
         CampoCurso,
         CampoEscolaridade,
@@ -475,6 +476,7 @@ private void carregarSexualidades() {
     String cpf = jFormattedTextField1.getText().trim();
     String nascimento = jFormattedTextField3.getText().trim();
     String email = jTextField3.getText().trim();
+    String senha = jTextField10.getText().trim();
     String telefone = jFormattedTextField2.getText().trim();
     modelo.Sexualidade sexualidadeSelecionada = (modelo.Sexualidade) jComboBox1.getSelectedItem();
 
@@ -504,6 +506,7 @@ private void carregarSexualidades() {
         || cpf.replaceAll("\\D", "").length() != 11
         || nascimento.replaceAll("\\D", "").length() != 8
         || email.isEmpty()
+        || senha.isEmpty()
         || telefone.replaceAll("\\D", "").length() < 10
         || cep.replaceAll("\\D", "").length() != 8
         || logradouro.isEmpty()
@@ -586,6 +589,7 @@ private void carregarSexualidades() {
     candidato.setCpf(cpf);
     candidato.setNascimento(nascimento);
     candidato.setEmail(email);
+    candidato.setSenha(senha);
     candidato.setTelefone(telefone);
 
     candidato.setCep(cep);
@@ -659,6 +663,7 @@ private void carregarSexualidades() {
         jTextField7.setText("");
         jTextField8.setText("");
         jTextField9.setText("");
+        jTextField10.setText("");
 
         CampoCurso.setText("");
         CampoEnsino.setText("");
@@ -797,6 +802,8 @@ private void carregarSexualidades() {
         jLabel33 = new javax.swing.JLabel();
         jFormattedTextField3 = new javax.swing.JFormattedTextField();
         jFormattedTextField4 = new javax.swing.JFormattedTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1300, 1050));
@@ -1265,8 +1272,8 @@ private void carregarSexualidades() {
         jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 200, 30));
 
         jLabel22.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
-        jLabel22.setText("UF *");
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 200, 20));
+        jLabel22.setText("Senha*");
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 250, 80, 20));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 80, 30));
@@ -1284,6 +1291,17 @@ private void carregarSexualidades() {
 
         jFormattedTextField4.setText("_____-___");
         jPanel1.add(jFormattedTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 100, 30));
+
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 270, 160, 30));
+
+        jLabel23.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        jLabel23.setText("UF *");
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 80, 20));
 
         javax.swing.GroupLayout jPainelFundoLayout = new javax.swing.GroupLayout(jPainelFundo);
         jPainelFundo.setLayout(jPainelFundoLayout);
@@ -1304,7 +1322,7 @@ private void carregarSexualidades() {
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(364, Short.MAX_VALUE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPainelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 1060, 1510));
@@ -1620,6 +1638,10 @@ private void estilizarBotaoSecundario(
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1703,6 +1725,7 @@ private void estilizarBotaoSecundario(
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
@@ -1724,6 +1747,7 @@ private void estilizarBotaoSecundario(
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;

@@ -23,13 +23,13 @@ public class CandidatoDao {
         }
 
         String sql = "INSERT INTO candidato ("
-                + "nome, cpf, nascimento, email, telefone, ID_Genero, "
+                + "nome, cpf, nascimento, email, senha, telefone, ID_Genero, "
                 + "cep, logradouro, numero, complemento, bairro, cidade, uf, "
                 + "curso, instituicao, escolaridade, cargo_desejado, "
                 + "area_interesse, nivel_profissional, tipo_trabalho, "
                 + "resumo, linguagens, github, linkedin"
                 + ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "
-                + "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                + "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
             Connection conexao = conexaoBanco.getConnection();
@@ -40,34 +40,35 @@ public class CandidatoDao {
             comando.setString(2, candidato.getCpf());
             comando.setString(3, candidato.getNascimento());
             comando.setString(4, candidato.getEmail());
-            comando.setString(5, candidato.getTelefone());
+            comando.setString(5, candidato.getSenha());
+            comando.setString(6, candidato.getTelefone());
             if (candidato.getSexualidade() != null && candidato.getSexualidade().getId() > 0) {
-                comando.setInt(6, candidato.getSexualidade().getId());
+                comando.setInt(7, candidato.getSexualidade().getId());
                 } else {
-                comando.setNull(6, java.sql.Types.INTEGER);
+                comando.setNull(7, java.sql.Types.INTEGER);
                 }
 
-            comando.setString(7, candidato.getCep());
-            comando.setString(8, candidato.getLogradouro());
-            comando.setString(9, candidato.getNumero());
-            comando.setString(10, candidato.getComplemento());
-            comando.setString(11, candidato.getBairro());
-            comando.setString(12, candidato.getCidade());
-            comando.setString(13, candidato.getUf());
+            comando.setString(8, candidato.getCep());
+            comando.setString(9, candidato.getLogradouro());
+            comando.setString(10, candidato.getNumero());
+            comando.setString(11, candidato.getComplemento());
+            comando.setString(12, candidato.getBairro());
+            comando.setString(13, candidato.getCidade());
+            comando.setString(14, candidato.getUf());
 
-            comando.setString(14, candidato.getCurso());
-            comando.setString(15, candidato.getInstituicao());
-            comando.setString(16, candidato.getEscolaridade());
+            comando.setString(15, candidato.getCurso());
+            comando.setString(16, candidato.getInstituicao());
+            comando.setString(17, candidato.getEscolaridade());
 
-            comando.setString(17, candidato.getCargoDesejado());
-            comando.setString(18, candidato.getAreaInteresse());
-            comando.setString(19, candidato.getNivelProfissional());
-            comando.setString(20, candidato.getTipoTrabalho());
-            comando.setString(21, candidato.getResumo());
-            comando.setString(22, candidato.getLinguagens());
+            comando.setString(18, candidato.getCargoDesejado());
+            comando.setString(19, candidato.getAreaInteresse());
+            comando.setString(20, candidato.getNivelProfissional());
+            comando.setString(21, candidato.getTipoTrabalho());
+            comando.setString(22, candidato.getResumo());
+            comando.setString(23, candidato.getLinguagens());
 
-            comando.setString(23, candidato.getGithub());
-            comando.setString(24, candidato.getLinkedin());
+            comando.setString(24, candidato.getGithub());
+            comando.setString(25, candidato.getLinkedin());
 
             int resultado = comando.executeUpdate();
 
@@ -89,7 +90,7 @@ public class CandidatoDao {
   
     }
     public boolean verificarSeExiste(String email, String senha) {
-    String sql = "SELECT * FROM candidato WHERE email = ? OR cpf = ?";
+    String sql = "SELECT * FROM candidato WHERE email = ? OR senha = ?";
     ConexaoBanco conexaoBanco = new ConexaoBanco();
     
     try (Connection conexao = conexaoBanco.getConnection();
