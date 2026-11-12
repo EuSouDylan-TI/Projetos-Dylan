@@ -1,73 +1,31 @@
-# 📦 Sistema de  Cadastro de Produtos, Usuario e Genero
+# ⚡ Pokédex Interactive Web App
 
-Aplicação Desktop desenvolvida em **Java** com interface gráfica moderna construída no **SceneBuilder (JavaFX)** e persistência de dados no **MySQL**. O sistema permite gerenciar usuários, produtos e gêneros.
+Uma aplicação web desenvolvida em **JavaScript**, **HTML5** e **CSS3** para consulta e filtragem dinâmica de Pokémon. O projeto foi construído focando na manipulação do DOM e persisêncica de dados no navegador.
+
+---
+## Feito No Segundo Periodo De ADS
+
+## 🚀 Funcionalidades
+
+- **Navegação Dinâmica:** Visualização e filtragem de cards de Pokémon.
+- **Busca e Filtros:** Pesquisa rápida por nome ou atributos dos Pokémon.
+- **Armazenamento Local:** Integração com o `localStorage` do navegador para salvar preferências/dados do usuário.
+- **Interface Responsiva:** Layout adaptado para diferentes tamanhos de tela (desktop e mobile).
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-- **Linguagem:** Java (JDK)
-- **Interface Gráfica:** JavaFX & SceneBuilder (FXML)
-- **Banco de Dados:** MySQL
-- **Conectividade:** JDBC (Java Database Connectivity)
-- **IDEs / Ferramentas:** VS Code / SceneBuilder
+- **HTML5:** Estruturação semântica da página.
+- **CSS3:** Estilização, layout flexível (Flexbox/Grid) e responsividade.
+- **JavaScript (ES6+):** Lógica de filtragem, manipulação do DOM e manipulação de armazenamento (`localStorage`).
 
 ---
 
-## ✨ Funcionalidades
+## 📁 Estrutura de Arquivos
 
-- [x] **Cadastro de Usuários:** Cadastro, listagem.
-- [x] **Cadastro de Produtos:** Cadastro de itens com vínculo de categorias.
-- [x] **Cadastro de Gêneros:** Cadastro, listagem E Uniao Com Usuarios.
-- [x] **Integração com MySQL:** Operações completas de CRUD (Create, Read, Update, Delete).
-
----
-
-## 🗄️ Estrutura do Banco de Dados
-
-Para rodar este projeto, utilize o script SQL abaixo para criar a estrutura do banco:
-
-```sql
--- Exemplo de criação do banco de dados
-CREATE DATABASE if NOT EXISTS BancoSQL;
-USE BancoSQL;
-
-CREATE TABLE if NOT EXISTS Sexualidade(
-    ID INT PRIMARY KEY AUTO_INCREMENT,
-    Descripcao VARCHAR(50) not null,
-    Sigla VARCHAR(20) not null,
-    Status CHAR(1) not null
-);
-
-CREATE TABLE if NOT EXISTS Usuarios(
-    ID INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(50) not null,
-    CPF VARCHAR(16) not null,
-    Nascimento DATE not null,
-    Telefone VARCHAR(15) not null,
-    ID_Genero INT,
-    Civil VARCHAR(30) not null,
-    CEP VARCHAR(9) NOT NULL,
-    Logradouro VARCHAR(160) NOT NULL,
-    Bairro VARCHAR(60) NOT NULL,
-    Cidade VARCHAR(60),
-    UF CHAR(2) NOT NULL,
-    Numero INT,
-    Complemento VARCHAR(150),
-    
-
-    CONSTRAINT fk_usuario_genero
-    Foreign Key (ID_Genero) REFERENCES Sexualidade(ID)
-    ON DELETE SET NULL
-);
-
-CREATE TABLE if NOT EXISTS Produtos(
-    ID INT PRIMARY KEY AUTO_INCREMENT,
-    Nome VARCHAR(50) not null,
-    Categoria VARCHAR(50) not null,
-    Estoque INT DEFAULT(0),
-    Validade DATE DEFAULT("Sem Validade"),
-    PrecoCusto DECIMAL(10,2) DEFAULT(0),
-    PrecoVenda DECIMAL(10,2) DEFAULT(0),
-    Status VARCHAR(25) DEFAULT("Inativo")
-);
+```text
+/Projeto Pokemon
+│-- index.html      # Estrutura principal da página web
+│-- /CSS       # Estilização e temas visuais
+│-- /Scripts      # Lógica de busca, renderização dos cards e localStorage
